@@ -7,22 +7,22 @@
 	<meta name="keywords" content="Loja Virtual, eCommerce, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Favicon -->
-	<link href="custom/img/favicon.ico" rel="shortcut icon"/>
+	<link href="custom/site/img/favicon.ico" rel="shortcut icon"/>
 
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
 
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="custom/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="custom/css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="custom/css/flaticon.css"/>
-	<link rel="stylesheet" href="custom/css/slicknav.min.css"/>
-	<link rel="stylesheet" href="custom/css/jquery-ui.min.css"/>
-	<link rel="stylesheet" href="custom/css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="custom/css/animate.css"/>
-	<link rel="stylesheet" href="custom/css/style.css"/>
-	<link rel="stylesheet" href="custom/css/custom.css"/>
+	<link rel="stylesheet" href="custom/site/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="custom/site/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="custom/site/css/flaticon.css"/>
+	<link rel="stylesheet" href="custom/site/css/slicknav.min.css"/>
+	<link rel="stylesheet" href="custom/site/css/jquery-ui.min.css"/>
+	<link rel="stylesheet" href="custom/site/css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="custom/site/css/animate.css"/>
+	<link rel="stylesheet" href="custom/site/css/style.css"/>
+	<link rel="stylesheet" href="custom/site/css/custom.css"/>
 
 </head>
 <body>

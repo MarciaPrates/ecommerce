@@ -9,7 +9,7 @@
 					<div class="footer-widget about-widget">
 						<h2>Sobre</h2>
 						<p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
-						<img src="custom/img/cards.png" alt="">
+						<img src="custom/site/img/cards.png" alt="">
 					</div>
 				</div>
 				<div class="col-lg-3 col-sm-6">
@@ -60,14 +60,14 @@
 
 
 	<!--====== Javascripts & Jquery ======-->
-	<script src="custom/js/jquery-3.2.1.min.js"></script>
-	<script src="custom/js/bootstrap.min.js"></script>
-	<script src="custom/js/jquery.slicknav.min.js"></script>
-	<script src="custom/js/owl.carousel.min.js"></script>
-	<script src="custom/js/jquery.nicescroll.min.js"></script>
-	<script src="custom/js/jquery.zoom.min.js"></script>
-	<script src="custom/js/jquery-ui.min.js"></script>
-	<script src="custom/js/main.js"></script>
+	<script src="custom/site/js/jquery-3.2.1.min.js"></script>
+	<script src="custom/site/js/bootstrap.min.js"></script>
+	<script src="custom/site/js/jquery.slicknav.min.js"></script>
+	<script src="custom/site/js/owl.carousel.min.js"></script>
+	<script src="custom/site/js/jquery.nicescroll.min.js"></script>
+	<script src="custom/site/js/jquery.zoom.min.js"></script>
+	<script src="custom/site/js/jquery-ui.min.js"></script>
+	<script src="custom/site/js/main.js"></script>
 
 	</body>
 </html>
