@@ -1,0 +1,39 @@
+.newslater {
+	width: 100%;
+	position: relative;
+	padding: 0 10px;
+}
+
+.newslater input {
+	width: 90%;
+	height: 44px;
+	font-size: 14px;
+	border-radius: 50px;
+	border: none;
+	padding: 0 19px;
+	background: #f0f0f0;
+}
+
+.social-links-warp {
+	border-top: 2px solid #3b3535;
+	padding: 13px 0;
+}
+
+.page-top-info {
+	background: #f8f7f7;
+	padding: 60px 0 40px;
+}
+
+.active a {
+
+	font-weight: bold !important;
+	color: blue !important;
+
+}
+
+
+.checkout-cart .price-list li span {
+    float: right;
+    width: 72px;
+    text-align: left;
+}
