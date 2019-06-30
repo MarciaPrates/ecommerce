@@ -140,89 +140,108 @@ class User extends Model {
 
  	public static function getForgot($email, $inadmin = true) {
 
- 		$sql = new Sql();
+        $sql = new Sql();
 
- 		$results = $sql->select("SELECT * FROM tb_persons a
-			INNER JOIN tb_users b USING(idperson)
-			WHERE a.desemail = :email;", array(
-				":email"=>$email
-			));
+        $results = $sql->select("
+         	SELECT *
+        	FROM tb_persons a
+         	INNER JOIN tb_users b USING(idperson)
+         	WHERE a.desemail = :email;
+     ", array(
+            ":email" => $email
+        ));
 
- 		if (count($results) === 0) {
+        if (count($results) === 0) {
 
- 			throw new \Exception("Não foi possível recuperar a senha.");
- 			
- 		} else {
+            throw new \Exception("Não foi possível recuperar a senha.");
 
- 			$data = $results[0];
+        } else {
 
- 			$results2 = $sql->select("CALL sp_userspasswordsrecoveries_create(:iduser, :desip)", array(
- 				":iduser"=>$data["iduser"],
- 				":desip"=>$_SERVER["REMOTE_ADDR"]
- 			));
+            $data = $results[0];
 
- 			if (count($results2) === 0) {
+            $results2 = $sql->select("CALL sp_userspasswordsrecoveries_create(:iduser, :desip)", array(
+                ":iduser" => $data['iduser'],
+                ":desip" => $_SERVER['REMOTE_ADDR']
+            ));
 
- 				throw new \Exception("Não foi possível recuperar a senha.");
- 				
- 			} else {
+            if (count($results2) === 0) {
 
- 				$dataRecovery = $results2[0];
+                throw new \Exception("Não foi possível recuperar a senha.");
 
- 				$iv = random_bytes(openssl_cipher_iv_length('aes-256-cbc')); // generate 16 random bytes
+            } else {
 
-	 			$code = openssl_encrypt($dataRecovery['idrecovery'], 'aes-256-cbc', User::SECRET, 0, $iv);
-	 			
-      			$code = base64_encode($code . '::' . $iv);
+                $dataRecovery = $results2[0];
 
- 				$link = "http://www.hcodecommerce.com.br/admin/forgot/reset?code=$code";
+                $iv = random_bytes(openssl_cipher_iv_length('aes-256-cbc'));
 
- 				$mailer = new Mailer($data["desemail"], $data["desperson"], "Redefinir Senha da Loja Virtual", "forgot", array(
-					"name"=>$data["desperson"],
-					"link"=>$link
-				));
+                $code = openssl_encrypt($dataRecovery['idrecovery'], 'aes-256-cbc', User::SECRET, 0, $iv);
 
- 				$mailer->send();
+                $result = base64_encode($iv . $code);
 
- 				return $data;
+                if ($inadmin === true) {
 
- 			}
+                    $link = "http://www.hcodecommerce.com.br/admin/forgot/reset?code=$result";
 
- 		}
+                } else {
 
- 	}
+                    $link = "http://www.hcodecommerce.com.br/forgot/reset?code=$result";
 
- 	public static function validForgotDecrypt($code) {
+                }
 
- 		$code = base64_decode($code);
+                $mailer = new Mailer($data['desemail'], $data['desperson'], "Redefinir senha da Loja Virtual", "forgot", array(
+                    "name" => $data['desperson'],
+                    "link" => $link
+                ));
 
-		$idrecovery = openssl_decrypt($code, 'AES-128-CBC', pack("a16", User::SECRET), 0, pack("a16", User::SECRET_IV));
+                $mailer->send();
 
-		$sql = new Sql();
+                return $link;
 
-		$results = $sql->select("SELECT * FROM tb_userspasswordsrecoveries a
-			INNER JOIN tb_users b USING(iduser)
-			INNER JOIN tb_persons c USING(idperson)
-			WHERE
-				a.idrecovery = :idrecovery
-				AND
-				a.dtrecovery IS NULL
-				AND
-				DATE_ADD(a.dtregister, INTERVAL 1 HOUR) >= NOW();", array(
-			":idrecovery"=>$idrecovery
-		));
+            }
 
-		if (count($results) === 0) {
+        }
 
-			throw new \Exception("Não foi possível recuperar a senha.");
+    }
 
-		} else {
+    public static function validForgotDecrypt($result) {
 
-			return $results[0];
+        $result = base64_decode($result);
 
-		}
+        $code = mb_substr($result, openssl_cipher_iv_length('aes-256-cbc'), null, '8bit');
 
- 	}
+        $iv = mb_substr($result, 0, openssl_cipher_iv_length('aes-256-cbc'), '8bit');
+
+        $idrecovery = openssl_decrypt($code, 'aes-256-cbc', User::SECRET, 0, $iv);
+
+        $sql = new Sql();
+
+        $results = $sql->select("
+         SELECT *
+         FROM tb_userspasswordsrecoveries a
+         INNER JOIN tb_users b USING(iduser)
+         INNER JOIN tb_persons c USING(idperson)
+         WHERE
+         a.idrecovery = :idrecovery
+         AND
+         a.dtrecovery IS NULL
+         AND
+         DATE_ADD(a.dtregister, INTERVAL 1 HOUR) >= NOW();
+     ", array(
+            ":idrecovery" => $idrecovery
+        ));
+
+        if (count($results) === 0) {
+
+            throw new \Exception("Não foi possível recuperar a senha.");
+
+        } else {
+
+            return $results[0];
+
+        }
+        
+    }
+
 
  	public static function setForgotUsed($idrecovery) {
 
