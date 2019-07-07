@@ -69,6 +69,11 @@
 				<!-- menu -->
 				<ul class="main-menu">
 					<li class="active"><a href="#">HOME</a></li>
+					<li><a href="#">CATEGORIAS</a>
+						<ul class="sub-menu">
+							<?php require $this->checkTemplate("categories-menu");?>
+						</ul>
+					</li>
 					<li><a href="#">PRODUTOS</a></li>
 					<li><a href="#">CARRINHO</a></li>
 				</ul>

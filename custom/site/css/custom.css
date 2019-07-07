@@ -31,9 +31,18 @@
 
 }
 
-
 .checkout-cart .price-list li span {
     float: right;
     width: 72px;
     text-align: left;
+}
+
+.related-product-section .section-title h2 {
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-size: 2em;
+}
+
+.related-product-section {
+	padding-top: 70px;
 }
