@@ -64,19 +64,21 @@ class Product extends Model {
 
     public function checkPhoto() {
 
-        if (file_exists(
-        $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR .
-        "custom" . DIRECTORY_SEPARATOR . 
-        "site" . DIRECTORY_SEPARATOR .
-        "product" . DIRECTORY_SEPARATOR .
-        $this->getidproduct() . ".jpg"
-        )) {
-            
-            $url = "/custom/site/img/product" . $this->getidproduct() . ".jpg";
+        if(file_exists($_SERVER['DOCUMENT_ROOT']. DIRECTORY_SEPARATOR.
+
+            "custom". DIRECTORY_SEPARATOR.
+            "site" . DIRECTORY_SEPARATOR .
+            "img" . DIRECTORY_SEPARATOR.
+            "product". DIRECTORY_SEPARATOR .
+
+            $this->getidproduct() . '.jpg')) {
+
+            $url = "/custom/site/img/product/" . $this->getidproduct() . ".jpg";
 
         } else {
 
             $url = "/custom/site/img/product.jpg";
+
         }
 
         return $this->setdesphoto($url);
@@ -99,35 +101,35 @@ class Product extends Model {
         $extension = end($extension);
 
         switch ($extension) {
-            case 'jpg':
-            case 'jpeg':
 
-                $image = imagecreatefromjpeg($file['tmp_name']);
-                break;
+            case "jpg":
+            case "jpeg":
 
-            case 'gif':
+            $image = imagecreatefromjpeg($file["tmp_name"]);
+            break;
 
-                $image = imagecreatefromgif($file['tmp_name']);
-                break;
+            case "gif":
 
-            case 'png':
+            $image = imagecreatefromgif($file["tmp_name"]);
+            break;
 
-                $image = imagecreatefrompng($file['tmp_name']);
-                break;
+            case "png":
 
+            $image = imagecreatefrompng($file["tmp_name"]);
+            break;
         }
 
-        $dist = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR .
+        $dist = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 
             "custom" . DIRECTORY_SEPARATOR . 
-            "site" . DIRECTORY_SEPARATOR .
-            "product" . DIRECTORY_SEPARATOR .
+            "site" . DIRECTORY_SEPARATOR . 
+            "img" . DIRECTORY_SEPARATOR . 
+            "product" . DIRECTORY_SEPARATOR . 
             $this->getidproduct() . ".jpg";
 
         imagejpeg($image, $dist);
         imagedestroy($image);
 
         $this->checkPhoto();
-
     }
 
 }
