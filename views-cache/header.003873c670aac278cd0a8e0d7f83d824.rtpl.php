@@ -45,11 +45,11 @@
 								<a href="#">Login</a> ou <a href="#">Criar Conta</a>
 							</div>
 							<div class="up-item">
-								<i class="flaticon-profile"></i>
+								<i class="flaticon-menu"></i>
 								<a href="#">Minha Conta</a>
 							</div>
 							<div class="up-item ml-4">
-								<i class="flaticon-profile"></i>
+								<i class="flaticon-heart"></i>
 								<a href="#">Lista de Desejos</a>
 							</div>
 							<div class="up-item ml-4">
