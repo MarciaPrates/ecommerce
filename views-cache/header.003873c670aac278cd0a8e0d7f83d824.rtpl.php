@@ -34,7 +34,7 @@
 				<div class="row">
 					<div class="col-lg-2 text-center text-lg-left">
 						<!-- logo -->
-						<a href="./index.html" class="site-logo">
+						<a href="/" class="site-logo">
 							<h2>LOGO</h2>
 						</a>
 					</div>
@@ -68,7 +68,7 @@
 			<div class="container">
 				<!-- menu -->
 				<ul class="main-menu">
-					<li class="active"><a href="#">HOME</a></li>
+					<li class="active"><a href="/">HOME</a></li>
 					<li><a href="#">CATEGORIAS</a>
 						<ul class="sub-menu">
 							<?php require $this->checkTemplate("categories-menu");?>

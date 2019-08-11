@@ -39,16 +39,16 @@
 
                 <div class="product-item">
                     <div class="pi-pic">
-                        <div class="tag-new">New</div>
-                        <img src="../custom/site/img/product/2.jpg" alt="">
+                        <!--<div class="tag-new">Novo</div>-->
+                        <img src="<?php echo htmlspecialchars( $value1["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="">
                         <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>COMPRAR</span></a>
                             <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                         </div>
                     </div>
                     <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Black and White Stripes Dress</p>
+                        <h6>R$<?php echo formatPrice($value1["vlprice"]); ?></h6>
+                        <p class="texto-categoria"><a href="/products/<?php echo htmlspecialchars( $value1["desurl"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["desproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a></p>
                     </div>
                 </div>
                 <?php } ?>

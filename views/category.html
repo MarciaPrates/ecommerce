@@ -38,16 +38,16 @@
                 {loop="$products"}
                 <div class="product-item">
                     <div class="pi-pic">
-                        <div class="tag-new">New</div>
-                        <img src="../custom/site/img/product/2.jpg" alt="">
+                        <!--<div class="tag-new">Novo</div>-->
+                        <img src="{$value.desphoto}" alt="">
                         <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>COMPRAR</span></a>
                             <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                         </div>
                     </div>
                     <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Black and White Stripes Dress</p>
+                        <h6>R${function="formatPrice($value.vlprice)"}</h6>
+                        <p class="texto-categoria"><a href="/products/{$value.desurl}">{$value.desproduct}</a></p>
                     </div>
                 </div>
                 {/loop}

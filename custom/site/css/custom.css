@@ -27,7 +27,7 @@
 .active a {
 
 	font-weight: bold !important;
-	color: blue !important;
+	color: #ec105a !important;
 
 }
 
@@ -45,4 +45,9 @@
 
 .related-product-section {
 	padding-top: 70px;
+}
+
+.texto-categoria a {
+    font-weight: inherit !important;
+    color: black !important;
 }
