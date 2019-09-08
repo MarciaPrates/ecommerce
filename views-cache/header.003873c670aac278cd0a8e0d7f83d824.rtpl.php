@@ -42,7 +42,7 @@
 						<div class="user-panel">
 							<div class="up-item">
 								<i class="flaticon-profile"></i>
-								<a href="#">Login</a> ou <a href="#">Criar Conta</a>
+								<a href="/admin/login">Login</a> ou <a href="#">Criar Conta</a>
 							</div>
 							<div class="up-item">
 								<i class="flaticon-menu"></i>

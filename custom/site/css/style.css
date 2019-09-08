@@ -88,10 +88,31 @@ ol {
 
 .section-title {
 	text-align: center;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	background: #f51167;
+	margin: 0 0 25px;
+	overflow: hidden;
+	padding: 20px;
+	border-radius: 35px 0px 35px 0px;
+	-moz-border-radius: 35px 0px 35px 0px;
+	-webkit-border-radius: 35px 0px 35px 0px;
+	border: 2px solid red;
+}
+
+.titulo-categoria {
+
+	color: white;
+
 }
 
 .section-title h2 {
 	font-size: 36px;
+}
+
+.spad {
+    padding-top: 65px !important;
+    padding-bottom: 125px !important;
 }
 
 .set-bg {
@@ -102,7 +123,7 @@ ol {
 
 .spad {
 	padding-top: 105px;
-	padding-bottom: 105px;
+	padding-bottom: 75px !important;
 }
 
 .text-white h1,

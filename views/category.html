@@ -28,34 +28,52 @@
 <body>
 
 
-    <!-- RELATED PRODUCTS section -->
-    <section class="related-product-section">
+    <!-- Category section -->
+    <section class="category-section spad">
         <div class="container">
-            <div class="section-title">
-                <h2>{$category.descategory}</h2>
+            <div class="section-title mb-5">
+                <h2 class="titulo-categoria">{$category.descategory}</h2>
             </div>
-            <div class="product-slider owl-carousel">
-                {loop="$products"}
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <!--<div class="tag-new">Novo</div>-->
-                        <img src="{$value.desphoto}" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>COMPRAR</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+            <div class="row">
+                <div class="col-lg-12 order-1 order-lg-2 mb-5 mb-lg-0 mt-3">
+                    <div class="row">
+                        {loop="$products"}
+                        <div class="col-lg-4 col-sm-6 mb-5">
+                            <div class="product-item">
+                                <div class="pi-pic">
+                                    <img src="{$value.desphoto}" alt="">
+                                    <div class="pi-links">
+                                        <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                        <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="pi-text">
+                                    <h6>R${function="formatPrice($value.vlprice)"}</h6>
+                                    <p class="texto-categoria"><a href="/products/{$value.desurl}">{$value.desproduct}</a></p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        {/loop}
+
+                        <div class="text-center w-100 pt-3">
+                            <nav aria-label="Navegação de página exemplo">
+                                <ul class="pagination justify-content-center">
+                                    {loop="$pages"}
+                                    <li class="page-item">
+                                        <a class="page-link" href="{$value.link}">{$value.page}</a>
+                                    </li>
+                                    {/loop}
+                                </ul>
+                            </nav>
                         </div>
                     </div>
-                    <div class="pi-text">
-                        <h6>R${function="formatPrice($value.vlprice)"}</h6>
-                        <p class="texto-categoria"><a href="/products/{$value.desurl}">{$value.desproduct}</a></p>
-                    </div>
                 </div>
-                {/loop}
-
             </div>
         </div>
     </section>
-    <!-- RELATED PRODUCTS section end -->
+    <!-- Category section end -->
+
 
 
 
