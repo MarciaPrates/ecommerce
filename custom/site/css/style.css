@@ -115,6 +115,13 @@ ol {
     padding-bottom: 125px !important;
 }
 
+#categoria-detail {
+
+	font-weight: bolder !important;
+	color: #f51167;
+
+}
+
 .set-bg {
 	background-repeat: no-repeat;
 	background-size: cover;
