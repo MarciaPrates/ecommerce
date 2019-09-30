@@ -42,7 +42,7 @@
 						<div class="user-panel">
 							<div class="up-item">
 								<i class="flaticon-profile"></i>
-								<a href="/admin/login">Login</a> ou <a href="#">Criar Conta</a>
+								<a href="/admin/login">Login</a> ou <a href="/admin/login">Criar Conta</a>
 							</div>
 							<div class="up-item">
 								<i class="flaticon-menu"></i>
@@ -57,7 +57,7 @@
 									<i class="flaticon-bag"></i>
 									<span>0</span>
 								</div>
-								<a href="carrinho.html">Carrinho</a>
+								<a href="/cart">Carrinho</a>
 							</div>
 						</div>
 					</div>
@@ -75,7 +75,7 @@
 						</ul>
 					</li>
 					<li><a href="#">PRODUTOS</a></li>
-					<li><a href="#">CARRINHO</a></li>
+					<li><a href="/cart">CARRINHO</a></li>
 				</ul>
 			</div>
 		</nav>
