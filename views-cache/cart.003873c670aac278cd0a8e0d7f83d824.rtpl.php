@@ -6,7 +6,7 @@
                     <div class="cart-table">
                         <h3>Seu Carrinho</h3>
                         <div class="cart-table-warp">
-                            <table>
+                        <table>
                             <thead>
                                 <tr>
                                     <th class="product-th">Produto</th>
@@ -16,12 +16,14 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php $counter1=-1;  if( isset($products) && ( is_array($products) || $products instanceof Traversable ) && sizeof($products) ) foreach( $products as $key1 => $value1 ){ $counter1++; ?>
+
                                 <tr>
                                     <td class="product-col">
-                                        <img src="img/cart/1.jpg" alt="">
+                                        <a href="/products/<?php echo htmlspecialchars( $value1["desurl"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><img src="<?php echo htmlspecialchars( $value1["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt=""></a>
                                         <div class="pc-title">
-                                            <h4>Animal Print Dress</h4>
-                                            <p>R$45.90</p>
+                                            <a href="/product/<?php echo htmlspecialchars( $value1["desurl"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><h4><?php echo htmlspecialchars( $value1["desproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h4></a>
+                                            <p>R$<?php echo formatPrice($value1["vlprice"]); ?></p>
                                         </div>
                                     </td>
                                     <td class="quy-col">
@@ -32,57 +34,28 @@
                                         </div>
                                     </td>
                                     <td class="total-col"><h4>R$45.90</h4></td>
-                                    <td class="total-col"><i class="flaticon-cancel-1" href="#"></i></td>
+                                    <td class="total-col"><i class="flaticon-cancel-1" href="/cart/<?php echo htmlspecialchars( $value1["idproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/remove"></i></td>
                                 </tr>
-                                <tr>
-                                    <td class="product-col">
-                                        <img src="img/cart/2.jpg" alt="">
-                                        <div class="pc-title">
-                                            <h4>Ruffle Pink Top</h4>
-                                            <p>R$45.90</p>
-                                        </div>
-                                    </td>
-                                    <td class="quy-col">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="total-col"><h4>R$45.90</h4></td>
-                                    <td class="total-col"><i class="flaticon-cancel-1" href="#"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="product-col">
-                                        <img src="img/cart/3.jpg" alt="">
-                                        <div class="pc-title">
-                                            <h4>Skinny Jeans</h4>
-                                            <p>R$45.90</p>
-                                        </div>
-                                    </td>
-                                    <td class="quy-col">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="total-col"><h4>R$45.90</h4></td>
-                                    <td class="total-col"><i class="flaticon-cancel-1" href="#"></i></td>
-                                </tr>
+                                <?php } ?>
+
                             </tbody>
                         </table>
                         </div>
                         <div class="total-cost">
-                            <h6>Total <span>R$99.90</span></h6>
+                            <h6>Total <span>R$<?php echo formatPrice($value["vltotal"]); ?></span></h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 card-right" action="/checkout">
 
-                    <div class="alert alert-danger" role="alert">
-                        Erro!
-                    </div>
+                    <?php if( $error != '' ){ ?>
+
+                        <div class="alert alert-danger" role="alert">
+                    <?php echo htmlspecialchars( $error, ENT_COMPAT, 'UTF-8', FALSE ); ?>
+
+                        </div>
+                        <?php } ?>
+
 
                     <form class="promo-code-form">
                         <input type="text" placeholder="Cupom de desconto">
