@@ -34,7 +34,7 @@
                                         </div>
                                     </td>
                                     <td class="total-col"><h4>R$45.90</h4></td>
-                                    <td class="total-col"><i class="flaticon-cancel-1" href="/cart/<?php echo htmlspecialchars( $value1["idproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/remove"></i></td>
+                                    <td class="total-col"><a href="/cart/<?php echo htmlspecialchars( $value1["idproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/remove"><i class="flaticon-cancel-1"></i></a></td>
                                 </tr>
                                 <?php } ?>
 
@@ -42,7 +42,7 @@
                         </table>
                         </div>
                         <div class="total-cost">
-                            <h6>Total <span>R$<?php echo formatPrice($value["vltotal"]); ?></span></h6>
+                            <h6>Total: R$<?php echo formatPrice($value["vltotal"]); ?></h6>
                         </div>
                     </div>
                 </div>
