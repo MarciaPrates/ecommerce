@@ -86,9 +86,9 @@
                     </div>-->
                     <div class="quantity">
                         <p>Quantidade</p>
-                        <div class="pro-qty"><input type="text" value="1"></div>
+                        <div class="pro-qty"><input type="text" value="1" name="qtd"></div>
                     </div>
-                    <a href="#" class="site-btn">COMPRAR</a>
+                    <a href="/cart/<?php echo htmlspecialchars( $product["idproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/add" class="site-btn">COMPRAR</a>
                     <div id="accordion" class="accordion-area">
                         <div class="panel">
                             <div class="panel-header" id="headingOne">

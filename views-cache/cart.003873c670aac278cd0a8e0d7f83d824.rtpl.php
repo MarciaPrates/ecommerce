@@ -1,8 +1,12 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?>    <!-- cart section end -->
     <section class="cart-section spad">
+        
         <div class="container">
+
             <div class="row">
+                
                 <div class="col-lg-8">
+
                     <div class="cart-table">
                         <h3>Seu Carrinho</h3>
                         <div class="cart-table-warp">
@@ -23,7 +27,6 @@
                                         <a href="/products/<?php echo htmlspecialchars( $value1["desurl"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><img src="<?php echo htmlspecialchars( $value1["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt=""></a>
                                         <div class="pc-title">
                                             <a href="/product/<?php echo htmlspecialchars( $value1["desurl"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><h4><?php echo htmlspecialchars( $value1["desproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h4></a>
-                                            <p>R$<?php echo formatPrice($value1["vlprice"]); ?></p>
                                         </div>
                                     </td>
                                     <td class="quy-col">
@@ -33,7 +36,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="total-col"><h4>R$45.90</h4></td>
+                                    <td class="total-col"><h4>R$<?php echo formatPrice($value1["vltotal"]); ?></h4></td>
                                     <td class="total-col"><a href="/cart/<?php echo htmlspecialchars( $value1["idproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/remove"><i class="flaticon-cancel-1"></i></a></td>
                                 </tr>
                                 <?php } ?>
@@ -42,10 +45,12 @@
                         </table>
                         </div>
                         <div class="total-cost">
-                            <h6>Total: R$<?php echo formatPrice($value["vltotal"]); ?></h6>
+                            <h6>Total:<span>R$<?php echo formatPrice($value["vltotal"]); ?></span></h6>
                         </div>
                     </div>
                 </div>
+
+                
                 <div class="col-lg-4 card-right" action="/checkout">
 
                     <?php if( $error != '' ){ ?>
