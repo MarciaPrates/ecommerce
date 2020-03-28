@@ -1,12 +1,8 @@
     <!-- cart section end -->
     <section class="cart-section spad">
-        
         <div class="container">
-
             <div class="row">
-                
                 <div class="col-lg-8">
-
                     <div class="cart-table">
                         <h3>Seu Carrinho</h3>
                         <div class="cart-table-warp">
@@ -26,6 +22,7 @@
                                         <a href="/products/{$value.desurl}"><img src="{$value.desphoto}" alt=""></a>
                                         <div class="pc-title">
                                             <a href="/product/{$value.desurl}"><h4>{$value.desproduct}</h4></a>
+                                            <p>R${function="formatPrice($value.vlprice)"}</p>
                                         </div>
                                     </td>
                                     <td class="quy-col">
@@ -38,34 +35,39 @@
                                     <td class="total-col"><h4>R${function="formatPrice($value.vltotal)"}</h4></td>
                                     <td class="total-col"><a href="/cart/{$value.idproduct}/remove"><i class="flaticon-cancel-1"></i></a></td>
                                 </tr>
-                                {/loop}
+                                
+                                
                             </tbody>
-                        </table>
+                            
+                        </table><a href="" class="site-btn btn-total">TOTAL: R$ {function="formatPrice($cart.vltotal)"}</a>
+                        
                         </div>
-                        <div class="total-cost">
-                            <h6>Total:<span>R${function="formatPrice($value.vltotal)"}</span></h6>
-                        </div>
+                        {/loop}
                     </div>
                 </div>
-
                 
                 <div class="col-lg-4 card-right" action="/checkout">
 
                     {if="$error != ''"}
                         <div class="alert alert-danger" role="alert">
-                    {$error}
+                            {$error}
                         </div>
-                        {/if}
+                     {/if}
 
-                    <form class="promo-code-form">
+                    <!--<form class="promo-code-form">
                         <input type="text" placeholder="Cupom de desconto">
                         <button>Aplicar</button>
-                    </form>
+                    </form>-->
+
                     <form class="promo-code-form">
-                        <input type="text" placeholder="CEP 00000-000">
-                        <button>Calcular</button>
+                        <input type="text" id="cep" placeholder="CEP 00000-000" name="zipcode" value="{$cart.deszipcode}">
+                        <button type="submit" formmethod="post" formaction="/cart/freight" value="CALCULAR">Calcular</button>
                     </form>
-                    <a href="" class="site-btn">Finalizar compra</a>
+                    <a href="" class="site-btn btn-frete">FRETE: R$ {function="formatPrice($cart.vlfreight)"}{if="$cart.nrdays > 0"} <br> <small>prazo de {$cart.nrdays} dia(s)</small>{/if}</a>
+
+                    &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035;
+
+                    <a type="submit" href="" class="site-btn" name="proceed" value="Finalizar Compra">Finalizar compra</a>
                     <a href="" class="site-btn sb-dark">Continuar comprando</a>
                 </div>
             </div>

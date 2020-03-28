@@ -51,3 +51,24 @@
     font-weight: inherit !important;
     color: black !important;
 }
+
+.btn-total {
+
+	
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: normal;
+	cursor: pointer;
+	text-align: center;
+	float: right;
+	border-radius: 5px 25px 5px 25px;
+}
+
+.btn-frete {
+
+	background-color: #9C9C9C;
+
+
+
+}

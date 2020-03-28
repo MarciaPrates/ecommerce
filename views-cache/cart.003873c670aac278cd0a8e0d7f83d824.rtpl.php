@@ -1,12 +1,8 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?>    <!-- cart section end -->
     <section class="cart-section spad">
-        
         <div class="container">
-
             <div class="row">
-                
                 <div class="col-lg-8">
-
                     <div class="cart-table">
                         <h3>Seu Carrinho</h3>
                         <div class="cart-table-warp">
@@ -27,6 +23,7 @@
                                         <a href="/products/<?php echo htmlspecialchars( $value1["desurl"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><img src="<?php echo htmlspecialchars( $value1["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt=""></a>
                                         <div class="pc-title">
                                             <a href="/product/<?php echo htmlspecialchars( $value1["desurl"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><h4><?php echo htmlspecialchars( $value1["desproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h4></a>
+                                            <p>R$<?php echo formatPrice($value1["vlprice"]); ?></p>
                                         </div>
                                     </td>
                                     <td class="quy-col">
@@ -39,38 +36,43 @@
                                     <td class="total-col"><h4>R$<?php echo formatPrice($value1["vltotal"]); ?></h4></td>
                                     <td class="total-col"><a href="/cart/<?php echo htmlspecialchars( $value1["idproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/remove"><i class="flaticon-cancel-1"></i></a></td>
                                 </tr>
-                                <?php } ?>
-
+                                
+                                
                             </tbody>
-                        </table>
+                            
+                        </table><a href="" class="site-btn btn-total">TOTAL: R$ <?php echo formatPrice($cart["vltotal"]); ?></a>
+                        
                         </div>
-                        <div class="total-cost">
-                            <h6>Total:<span>R$<?php echo formatPrice($value["vltotal"]); ?></span></h6>
-                        </div>
+                        <?php } ?>
+
                     </div>
                 </div>
-
                 
                 <div class="col-lg-4 card-right" action="/checkout">
 
                     <?php if( $error != '' ){ ?>
 
                         <div class="alert alert-danger" role="alert">
-                    <?php echo htmlspecialchars( $error, ENT_COMPAT, 'UTF-8', FALSE ); ?>
+                            <?php echo htmlspecialchars( $error, ENT_COMPAT, 'UTF-8', FALSE ); ?>
 
                         </div>
-                        <?php } ?>
+                     <?php } ?>
 
 
-                    <form class="promo-code-form">
+                    <!--<form class="promo-code-form">
                         <input type="text" placeholder="Cupom de desconto">
                         <button>Aplicar</button>
-                    </form>
+                    </form>-->
+
                     <form class="promo-code-form">
-                        <input type="text" placeholder="CEP 00000-000">
-                        <button>Calcular</button>
+                        <input type="text" id="cep" placeholder="CEP 00000-000" name="zipcode" value="<?php echo htmlspecialchars( $cart["deszipcode"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                        <button type="submit" formmethod="post" formaction="/cart/freight" value="CALCULAR">Calcular</button>
                     </form>
-                    <a href="" class="site-btn">Finalizar compra</a>
+                    <a href="" class="site-btn btn-frete">FRETE: R$ <?php echo formatPrice($cart["vlfreight"]); ?><?php if( $cart["nrdays"] > 0 ){ ?> <br> <small>prazo de <?php echo htmlspecialchars( $cart["nrdays"], ENT_COMPAT, 'UTF-8', FALSE ); ?> dia(s)</small><?php } ?></a>
+
+                    &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035;
+
+                    <a type="submit" href="" class="site-btn" name="proceed" value="Finalizar Compra">Finalizar compra</a>
                     <a href="" class="site-btn sb-dark">Continuar comprando</a>
                 </div>
             </div>
