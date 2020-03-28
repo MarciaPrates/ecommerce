@@ -36,15 +36,15 @@
                                     <td class="total-col"><h4>R$<?php echo formatPrice($value1["vltotal"]); ?></h4></td>
                                     <td class="total-col"><a href="/cart/<?php echo htmlspecialchars( $value1["idproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/remove"><i class="flaticon-cancel-1"></i></a></td>
                                 </tr>
-                                
+                                <?php } ?>
+
                                 
                             </tbody>
                             
                         </table><a href="" class="site-btn btn-total">TOTAL: R$ <?php echo formatPrice($cart["vltotal"]); ?></a>
                         
                         </div>
-                        <?php } ?>
-
+                        
                     </div>
                 </div>
                 
