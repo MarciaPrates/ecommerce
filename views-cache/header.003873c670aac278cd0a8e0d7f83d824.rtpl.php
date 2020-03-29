@@ -40,10 +40,7 @@
 					</div>
 					<div class="col-xl-4 col-lg-10 text-right">
 						<div class="user-panel">
-							<div class="up-item">
-								<i class="flaticon-profile"></i>
-								<a href="/admin/login">Login</a> ou <a href="/admin/login">Criar Conta</a>
-							</div>
+							
 							<div class="up-item">
 								<i class="flaticon-menu"></i>
 								<a href="#">Minha Conta</a>
@@ -55,10 +52,25 @@
 							<div class="up-item ml-4">
 								<div class="shopping-card">
 									<i class="flaticon-bag"></i>
-									<span>0</span>
+									<span>R$<?php echo getCartVlSubTotal(); ?></span>
 								</div>
 								<a href="/cart">Carrinho</a>
 							</div>
+							<?php if( checkLogin(false) ){ ?>
+							<div class="up-item ml-4">
+								<i class="flaticon-profile"></i>
+								<a href="/profile"><?php echo getUserName(); ?></a>
+							</div>
+							<div class="up-item ml-4">
+								<i class="flaticon-logout"></i>
+								<a href="/logout">Sair</a>
+							</div>
+							<?php }else{ ?>
+							<div class="up-item ml-4">
+								<i class="flaticon-profile"></i>
+								<a href="/login">Login</a> ou <a href="/login">Criar Conta</a>
+							</div>
+							<?php } ?>
 						</div>
 					</div>
 				</div>
