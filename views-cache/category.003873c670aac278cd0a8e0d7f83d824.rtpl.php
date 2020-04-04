@@ -44,7 +44,7 @@
                                 <div class="pi-pic">
                                     <img src="<?php echo htmlspecialchars( $value1["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="">
                                     <div class="pi-links">
-                                        <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                        <a href="/cart/<?php echo htmlspecialchars( $value1["idproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/add" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
                                         <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                                     </div>
                                 </div>
