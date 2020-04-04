@@ -14,15 +14,15 @@
 
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="custom/site/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="custom/site/css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="custom/site/css/flaticon.css"/>
-	<link rel="stylesheet" href="custom/site/css/slicknav.min.css"/>
-	<link rel="stylesheet" href="custom/site/css/jquery-ui.min.css"/>
-	<link rel="stylesheet" href="custom/site/css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="custom/site/css/animate.css"/>
-	<link rel="stylesheet" href="custom/site/css/style.css"/>
-	<link rel="stylesheet" href="custom/site/css/custom.css"/>
+	<link rel="stylesheet" href="/custom/site/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/custom/site/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="/custom/site/css/flaticon.css"/>
+	<link rel="stylesheet" href="/custom/site/css/slicknav.min.css"/>
+	<link rel="stylesheet" href="/custom/site/css/jquery-ui.min.css"/>
+	<link rel="stylesheet" href="/custom/site/css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="/custom/site/css/animate.css"/>
+	<link rel="stylesheet" href="/custom/site/css/style.css"/>
+	<link rel="stylesheet" href="/custom/site/css/custom.css"/>
 
 </head>
 <body>

@@ -2,12 +2,13 @@
     <section class="contact-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 contact-info">
+                <div class="col-lg-6 contact-info text-center">
                     <h3>Email enviado com sucesso!</h3>
                     
-                    <p>Verifique seu e-mail e siga as instruções para recuperar a sua senha.</p>
+                    <button class="site-btn mb-5">Verifique seu e-mail e siga as instruções para recuperar a sua senha.</button>
+                    <br>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact section end -->
+<!-- Contact section end -->

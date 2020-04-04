@@ -496,7 +496,7 @@ class User extends Model {
             'pages'=>ceil($resultTotal[0]["nrtotal"] / $itemsPerPage)
         ];
 
-    } 
+    }
 
 }
 
