@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 use \Hcode\Page;
 use \Hcode\Model\Product;
@@ -526,7 +526,7 @@ $app->post("/profile", function(){
 
 	$user->setData($_POST);
 
-	$user->save();
+	$user->update();
 
 	User::setSuccess("Dados alterados com sucesso!");
 
@@ -732,4 +732,5 @@ $app->post("/profile/change-password", function(){
 
 });
 
-?>
+
+ ?>

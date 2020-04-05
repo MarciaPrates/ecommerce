@@ -43,7 +43,7 @@
 							
 							<div class="up-item">
 								<i class="flaticon-menu"></i>
-								<a href="#">Minha Conta</a>
+								<a href="/profile">Minha Conta</a>
 							</div>
 							<div class="up-item ml-4">
 								<i class="flaticon-heart"></i>

@@ -17,10 +17,10 @@ class Mailer {
 	{
 
 		$config = array(
-			"tpl_dir"	=>$_SERVER["DOCUMENT_ROOT"].'/views/email/',
-			"cache_dir"	=>$_SERVER["DOCUMENT_ROOT"].'/views-cache/',
-			"debug"		=> false
-		);
+			"tpl_dir"       => $_SERVER["DOCUMENT_ROOT"]."/views/email/",
+			"cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/views-cache/",
+			"debug"         => false
+	    );
 
 		Tpl::configure( $config );
 
@@ -31,11 +31,12 @@ class Mailer {
 		}
 
 		$html = $tpl->draw($tplName, true);
-		
-		//Create a new PHPMailer instance
+
 		$this->mail = new \PHPMailer;
 
 		//Tell PHPMailer to use SMTP
+		$this->mail->isSMTP();
+
 		//Enable SMTP debugging
 		// 0 = off (for production use)
 		// 1 = client messages
@@ -48,21 +49,11 @@ class Mailer {
 		//Set the hostname of the mail server
 		$this->mail->Host = 'smtp.gmail.com';
 		// use
-		// $mail->Host = gethostbyname('smtp.gmail.com');
+		// $this->mail->Host = gethostbyname('smtp.gmail.com');
 		// if your network does not support SMTP over IPv6
+
 		//Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
 		$this->mail->Port = 587;
-
-		$this->mail->isSMTP();
-		$this->mail->SMTPOptions = array(
-			'ssl' => array(
-			'verify_peer' => false,
-			'verify_peer_name' => false,
-			'allow_self_signed' => true
-			)
-		);
-
-		//$this->mail->SMTPOptions = array(     'ssl' => array(         'verify_peer' => false,         'verify_peer_name' => false,         'allow_self_signed' => true     ) );
 
 		//Set the encryption system to use - ssl (deprecated) or tls
 		$this->mail->SMTPSecure = 'tls';
@@ -77,10 +68,10 @@ class Mailer {
 		$this->mail->Password = Mailer::PASSWORD;
 
 		//Set who the message is to be sent from
-		$this->mail->SetFrom(Mailer::USERNAME, Mailer::NAME_FROM);
+		$this->mail->setFrom(Mailer::USERNAME, Mailer::NAME_FROM);
 
 		//Set an alternative reply-to address
-		//$mail->addReplyTo('', 'First Last');
+		//$this->mail->addReplyTo('replyto@example.com', 'First Last');
 
 		//Set who the message is to be sent to
 		$this->mail->addAddress($toAddress, $toName);
@@ -96,19 +87,18 @@ class Mailer {
 		$this->mail->AltBody = 'This is a plain-text message body';
 
 		//Attach an image file
-		// $mail->addAttachment('images/phpmailer_mini.png');
+		//$mail->addAttachment('images/phpmailer_mini.png');
 
 	}
 
-	public function send() {
+	public function send()
+	{
 
 		return $this->mail->send();
 
 	}
 
 }
-
-
 
 
 ?>
