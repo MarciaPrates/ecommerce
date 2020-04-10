@@ -31,36 +31,15 @@
 								<input type="text" placeholder="País" id="billing_state" name="descountry" value="{$address.descountry}">
 							</div>
 						</div>
-						<!--<div class="cf-title">Delievery Info</div>
-						<div class="row shipping-btns">
-							<div class="col-6">
-								<h4>Standard</h4>
-							</div>
-							<div class="col-6">
-								<div class="cf-radio-btns">
-									<div class="cfr-item">
-										<input type="radio" name="shipping" id="ship-1">
-										<label for="ship-1">Free</label>
-									</div>
-								</div>
-							</div>
-							<div class="col-6">
-								<h4>Next day delievery  </h4>
-							</div>
-							<div class="col-6">
-								<div class="cf-radio-btns">
-									<div class="cfr-item">
-										<input type="radio" name="shipping" id="ship-2">
-										<label for="ship-2">$3.45</label>
-									</div>
-								</div>
-							</div>
-						</div>-->
 						<div class="cf-title">Pagamento</div>
 						<ul class="payment-list">
-							<li><a href="#" checked="checked" id="method-paypal" name="payment-method" value="2"><img src="/custom/site/img/paypal.png" alt=""></a> Paypal</li>
-							<li><a href="#" id="method-pagseguro" name="payment-method" value="1"><img src="/custom/img/paypal.png" alt=""></a> PagSeguro</li>
-							<li><a href="#"><img src="/custom/site/img/mastercart.png" alt=""></a> Cartão de Crédito</li>
+							
+							<li><input type="radio" id="method-pagseguro" name="payment-method" value="1"> <img src="/custom/site/img/pagseguro.png" alt=""> PagSeguro</li>
+
+							<li><input type="radio" checked="checked" id="method-paypal" name="payment-method" value="2"> <img src="/custom/site/img/paypal.png" alt=""></a> Paypal</li>
+
+							<li><input type="radio" id=""name="" value="3"> <img src="/custom/site/img/mastercart.png" alt=""> Cartão de Crédito</li>
+
 							<li>Escolha o método de pagamento</li>
 						</ul>
 						<button class="site-btn submit-order-btn" data-value="Place order" value="Continuar" id="place_order" name="woocommerce_checkout_place_order">CONTINUAR</button>

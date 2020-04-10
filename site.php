@@ -202,12 +202,6 @@ $app->post("/checkout", function(){
 		exit;
 	}
 
-	if (!isset($_POST['desdistrict']) || $_POST['desdistrict'] === '') {
-		Address::setMsgError("Informe o bairro.");
-		header('Location: /checkout');
-		exit;
-	}
-
 	if (!isset($_POST['descity']) || $_POST['descity'] === '') {
 		Address::setMsgError("Informe a cidade.");
 		header('Location: /checkout');
@@ -244,11 +238,11 @@ $app->post("/checkout", function(){
 	$order = new Order();
 
 	$order->setData([
-		'idcart'=>$cart->getidcart(),
-		'idaddress'=>$address->getidaddress(),
-		'iduser'=>$user->getiduser(),
-		'idstatus'=>OrderStatus::EM_ABERTO,
-		'vltotal'=>$cart->getvltotal()
+	    'idcart'=>$cart->getidcart(),
+	    'idaddress'=>$address->getidaddress(),
+	    'iduser'=>$user->getiduser(),
+	    'idstatus'=>OrderStatus::EM_ABERTO,
+	    'vltotal'=>$totals['vlprice'] + $cart->getvlfreight()
 	]);
 
 	$order->save();
