@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace Hcode\Model;
 
@@ -320,4 +320,4 @@ class Cart extends Model {
 
 }
 
-?>
+ ?>

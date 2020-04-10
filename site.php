@@ -526,7 +526,7 @@ $app->post("/profile", function(){
 
 	$user->setData($_POST);
 
-	$user->update();
+	$user->save();
 
 	User::setSuccess("Dados alterados com sucesso!");
 

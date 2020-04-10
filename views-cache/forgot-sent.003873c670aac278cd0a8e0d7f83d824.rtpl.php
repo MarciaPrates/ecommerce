@@ -5,7 +5,7 @@
                 <div class="col-lg-6 contact-info">
                     <h3>Email enviado com sucesso!</h3>
                     
-                    <button class="site-btn mb-5">Verifique seu e-mail e siga as instruções para recuperar a sua senha.</button>
+                    <a href="/login"><button class="site-btn mb-5">Verifique seu e-mail e siga as instruções para recuperar a sua senha. <br>Volte para o Login</button></a>
                     <br>
                 </div>
             </div>
