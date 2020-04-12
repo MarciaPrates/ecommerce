@@ -8,10 +8,6 @@
                         <ul class="category-menu">
                             <li><a href="#"><button type="submit" id="btn-print" class="button alt" style="margin-bottom:10px">Imprimir</button></a>
                             </li>
-                            <li><a href="#">Colar</a></li>
-                            <li><a href="#">Tênis</a></li>
-                            <li><a href="#">Bonés</a></li>
-                            <li><a href="#">Outros</a></li>
                         </ul>
                     </div>
                 </div>

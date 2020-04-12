@@ -29,7 +29,7 @@
                                     <td class="quy-col">
                                         <div class="quantity">
                                             <div class="pro-qty">
-                                                <input type="text" name="qtd" value="1"><!--<a href="/cart/<?php echo htmlspecialchars( $value1["idproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/add"></a>-->
+                                                <a href="/cart/<?php echo htmlspecialchars( $value1["idproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/add"><input type="text" name="qtd" value="1"></a>
                                             </div>
                                         </div>
                                     </td>

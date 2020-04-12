@@ -157,7 +157,7 @@ class User extends Model {
             ":iduser"=>$iduser
         ));
 
-        $data = $results[0];
+        $data = $results[0]; //$data[0];
 
         $data['desperson'] = utf8_encode($data['desperson']);
 

@@ -242,21 +242,21 @@ $app->post("/checkout", function(){
 	    'idaddress'=>$address->getidaddress(),
 	    'iduser'=>$user->getiduser(),
 	    'idstatus'=>OrderStatus::EM_ABERTO,
-	    'vltotal'=>$totals['vlprice'] + $cart->getvlfreight()
+	    'vltotal'=>$cart->getvltotal()
 	]);
 
 	$order->save();
 
 	switch ((int)$_POST['payment-method']) {
-
-		case 1:
-		header("Location: /order/".$order->getidorder()."/pagseguro");
-		break;
-
-		case 2:
-		header("Location: /order/".$order->getidorder()."/paypal");
-		break;
-
+ 
+    case 1:
+        header("Location: /order/".$order->getidorder()."/pagseguro");
+        break;
+ 
+    case 2:
+        header("Location: /order/".$order->getidorder()."/paypal");
+        break;
+ 
 	}
 
 	exit;
@@ -642,7 +642,7 @@ $app->get("/profile/orders/:idorder", function($idorder){
 
 	$cart = new Cart();
 
-	$cart->get((int)$order->getidcart());
+	$cart->get($order->getidcart());
 
 	$cart->getCalculateTotal();
 
