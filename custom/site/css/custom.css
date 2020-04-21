@@ -82,3 +82,16 @@
 	padding-bottom: 70px !important;
 
 }
+
+
+#botao-imprimir {
+	
+	text-align: center !important;
+
+}
+
+#botao-imprimir a {
+
+	font-size: 28px;
+
+}

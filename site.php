@@ -167,7 +167,6 @@ $app->get("/checkout", function(){
 	}
 
 	if (!$address->getdesaddress()) $address->setdesaddress('');
-	if (!$address->getdesnumber()) $address->setdesnumber('');
 	if (!$address->getdescomplement()) $address->setdescomplement('');
 	if (!$address->getdesdistrict()) $address->setdesdistrict('');
 	if (!$address->getdescity()) $address->setdescity('');
@@ -238,11 +237,11 @@ $app->post("/checkout", function(){
 	$order = new Order();
 
 	$order->setData([
-	    'idcart'=>$cart->getidcart(),
-	    'idaddress'=>$address->getidaddress(),
-	    'iduser'=>$user->getiduser(),
-	    'idstatus'=>OrderStatus::EM_ABERTO,
-	    'vltotal'=>$cart->getvltotal()
+		'idcart'=>$cart->getidcart(),
+		'idaddress'=>$address->getidaddress(),
+		'iduser'=>$user->getiduser(),
+		'idstatus'=>OrderStatus::EM_ABERTO,
+		'vltotal'=>$cart->getvltotal()
 	]);
 
 	$order->save();
@@ -250,11 +249,11 @@ $app->post("/checkout", function(){
 	switch ((int)$_POST['payment-method']) {
  
     case 1:
-        header("Location: /order/".$order->getidorder()."/pagseguro");
+        header("Location: /order".$order->getidorder()."/pagseguro");
         break;
  
     case 2:
-        header("Location: /order/".$order->getidorder()."/paypal");
+        header("Location: /order".$order->getidorder()."/paypal");
         break;
  
 	}
@@ -514,6 +513,7 @@ $app->post("/profile", function(){
 
 	}
 
+	$_POST['iduser'] = $user->getiduser();
 	$_POST['inadmin'] = $user->getinadmin();
 	$_POST['despassword'] = $user->getdespassword();
 	$_POST['deslogin'] = $_POST['desemail'];
