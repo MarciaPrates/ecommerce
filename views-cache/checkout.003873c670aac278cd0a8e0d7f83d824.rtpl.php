@@ -18,6 +18,9 @@
 
 							<div class="col-md-12">
 								<input type="text" placeholder="Endereço, Logradouro e Bairro" value="<?php echo htmlspecialchars( $address["desaddress"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" id="billing_address_1" name="desaddress">
+
+								<input type="text" placeholder="Número" value="<?php echo htmlspecialchars( $address["desnumber"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" id="billing_number_1" name="desnumber">
+
 								<input type="text" placeholder="Complemento (Opcional)" value="<?php echo htmlspecialchars( $address["descomplement"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" id="billing_address_2" name="descomplement">
 							</div>
 							<div class="col-md-6">

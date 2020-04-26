@@ -71,6 +71,7 @@
                     <a href="" class="site-btn btn-frete">FRETE: R$ <?php echo formatPrice($cart["vlfreight"]); ?><?php if( $cart["nrdays"] > 0 ){ ?> <br> <small>prazo de <?php echo htmlspecialchars( $cart["nrdays"], ENT_COMPAT, 'UTF-8', FALSE ); ?> dia(s)</small><?php } ?></a>
 
                     &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035; &#10035;
+                    <br><br>
 
                     <a type="submit" href="/login" class="site-btn" name="proceed" value="Finalizar Compra">Finalizar compra</a>
                     <!--<a href="" class="site-btn sb-dark">Continuar comprando</a>-->

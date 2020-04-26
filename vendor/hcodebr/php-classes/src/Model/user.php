@@ -144,6 +144,8 @@ class User extends Model {
             ":inadmin"=>$this->getinadmin()
         ));
 
+        //https://www.udemy.com/course/curso-php-7-online/learn/lecture/7961364#questions/9286830-->
+
         $this->setData($results[0]);
 
     }
