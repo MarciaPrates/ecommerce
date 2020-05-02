@@ -1,37 +1,35 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Hero section -->
 	<section class="hero-section">
 		<div class="hero-slider owl-carousel">
-			<div class="hs-item set-bg" data-setbg="custom/site/img/bg.jpg">
+			<div class="hs-item set-bg" data-setbg="custom/site/img/Fundo1.jpg">
 				<div class="container">
 					<div class="row">
-						<div class="col-xl-6 col-lg-7 text-white">
-							<span>Jaqueta Jeans</span>
-							<h2>Denim jackets</h2>
-							<p>Moderna, bonita e estilosa. </p>
-							<a href="#" class="site-btn sb-white">ADICIONAR AO CARRINHO</a>
+						<div class="col-xl-6 col-lg-7 text-black">
+							<span>Venha conhecer</span>
+							<h2>Nossos produtos</h2>
+							<p>Modernos, bonitos e estilosos. </p>
 						</div>
 					</div>
 					<div class="offer-card text-white">
-						<span>Apenas</span>
-						<h2>$30</h2>
-						<p>PROMOÇÃO</p>
+						<span>O melhor</span>
+						<h2>&#128525;</h2>
+						<p>Do mundo</p>
 					</div>
 				</div>
 			</div>
-			<div class="hs-item set-bg" data-setbg="custom/site/img/bg-2.jpg">
+			<div class="hs-item set-bg" data-setbg="custom/site/img/Fundo2.jpg">
 				<div class="container">
 					<div class="row">
-						<div class="col-xl-6 col-lg-7 text-white">
-							<span>Óculos Retrô</span>
-							<h2>Ana Hickmann</h2>
-							<p>Aros prateados, hastes de silicone, estiloso. </p>
-							<a href="#" class="site-btn sb-white">ADICIONAR AO CARRINHO</a>
+						<div class="col-xl-6 col-lg-7 text-black">
+							<span>Aparelhos Retrô</span>
+							<h2>E incríveis</h2>
+							<p>Bastante diversidade e Excelência.</p>
 						</div>
 					</div>
 					<div class="offer-card text-white">
-						<span>Apenas</span>
-						<h2>$29</h2>
-						<p>PROMOÇÃO</p>
+						<span>Com</span>
+						<h2>&#128516;</h2>
+						<p>Qualidade</p>
 					</div>
 				</div>
 			</div>

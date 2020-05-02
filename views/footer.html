@@ -2,13 +2,13 @@
 	<section class="footer-section">
 		<div class="container">
 			<div class="footer-logo text-center">
-				<a href="index.html"><h2 class="text-white">LOGO</h2></a>
+				<a href="index.html"><h2 class="text-white">Ecommerce</h2></a>
 			</div>
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget about-widget">
 						<h2>Sobre</h2>
-						<p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
+						<p>Loja de venda de celulares feita para estudo pelo curso da Udemy da Hcode. Utilizado PHP 7.</p>
 						<img src="../custom/site/img/cards.png" alt="">
 					</div>
 				</div>

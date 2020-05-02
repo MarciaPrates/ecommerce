@@ -35,7 +35,7 @@
 					<div class="col-lg-2 text-center text-lg-left">
 						<!-- logo -->
 						<a href="/" class="site-logo">
-							<h2>LOGO</h2>
+							<h2>Ecommerce</h2>
 						</a>
 					</div>
 					<div class="col-xl-4 col-lg-10 text-right">
