@@ -15,8 +15,6 @@
     <!-- Main content -->
     <section class="content">
 
-      <h1>Olá</h1>
-
     </section>
     <!-- /.content -->
   </div>
