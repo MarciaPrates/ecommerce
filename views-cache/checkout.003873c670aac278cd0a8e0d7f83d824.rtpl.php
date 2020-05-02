@@ -2,7 +2,7 @@
 	<section class="checkout-section spad">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-8 order-2 order-lg-1">
+				<div class="col-lg-7 order-2 order-lg-1">
 					<form class="checkout-form" action="/checkout" method="post" name="checkout">
 						<div class="cf-title">Endereço de Entrega</div>
 						<div class="row address-inputs">
@@ -36,21 +36,19 @@
 								<input type="text" placeholder="País" id="billing_state" name="descountry" value="<?php echo htmlspecialchars( $address["descountry"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
 							</div>
 						</div>
-						<div class="cf-title">Pagamento</div>
+						<div class="cf-title">PAGAMENTO</div>
 						<ul class="payment-list">
 							
 							<li><input type="radio" id="method-pagseguro" name="payment-method" value="1"> <img src="/custom/site/img/pagseguro.png" alt=""> PagSeguro</li>
 
 							<li><input type="radio" checked="checked" id="method-paypal" name="payment-method" value="2"> <img src="/custom/site/img/paypal.png" alt=""></a> Paypal</li>
 
-							<li><input type="radio" id=""name="" value="3"> <img src="/custom/site/img/mastercart.png" alt=""> Cartão de Crédito</li>
-
-							<li>Escolha o método de pagamento</li>
+							<li> >> Escolha o método de pagamento</li>
 						</ul>
 						<button class="site-btn submit-order-btn" data-value="Place order" value="Continuar" id="place_order" name="woocommerce_checkout_place_order">CONTINUAR</button>
 					</form>
 				</div>
-				<div class="col-lg-4 order-1 order-lg-2">
+				<div class="col-lg-5 order-1 order-lg-2">
 					<div class="checkout-cart">
 						<h3>Seus Produtos</h3>
 						<ul class="product-list">
