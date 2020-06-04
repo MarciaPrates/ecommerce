@@ -30,6 +30,7 @@ class User extends Model {
 
     }
 
+
     public static function checkLogin($inadmin = true)
     {
 
@@ -39,6 +40,7 @@ class User extends Model {
             !$_SESSION[User::SESSION]
             ||
             !(int)$_SESSION[User::SESSION]["iduser"] > 0
+
         ) {
             //Não está logado
             return false;
@@ -62,6 +64,8 @@ class User extends Model {
         }
 
     }
+
+
 
     public static function login($login, $password)
     {
@@ -501,5 +505,6 @@ class User extends Model {
     } 
 
 }
+
 
  ?>

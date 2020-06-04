@@ -17,7 +17,9 @@
 
 
 							<div class="col-md-12">
-								<input type="text" placeholder="Endereço, Logradouro e Bairro" value="<?php echo htmlspecialchars( $address["desaddress"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" id="billing_address_1" name="desaddress">
+								<input type="text" placeholder="Endereço e Logradouro" value="<?php echo htmlspecialchars( $address["desaddress"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" id="billing_address_1" name="desaddress">
+
+								<input type="text" placeholder="Bairro" value="<?php echo htmlspecialchars( $address["desdistrict"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" id="billing_district" name="desdistrict">
 
 								<input type="text" value="<?php echo htmlspecialchars( $address["desnumber"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" placeholder="Número" id="billing_address_1" name="desnumber" class="input-text ">
 

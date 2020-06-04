@@ -202,6 +202,12 @@ $app->post("/checkout", function(){
 		exit;
 	}
 
+	if (!isset($_POST['desdistrict']) || $_POST['desdistrict'] === '') {
+		Address::setMsgError("Informe o bairro.");
+		header('Location: /checkout');
+		exit;
+	}
+
 	if (!isset($_POST['descity']) || $_POST['descity'] === '') {
 		Address::setMsgError("Informe a cidade.");
 		header('Location: /checkout');
@@ -250,11 +256,11 @@ $app->post("/checkout", function(){
 	switch ((int)$_POST['payment-method']) {
  
     case 1:
-        header("Location: /order".$order->getidorder()."/pagseguro");
+        header("Location: ./order".$order->getidorder()."/pagseguro");
         break;
  
     case 2:
-        header("Location: /order".$order->getidorder()."/paypal");
+        header("Location: ./order".$order->getidorder()."/paypal");
         break;
  
 	}
