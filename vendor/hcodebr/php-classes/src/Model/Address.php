@@ -54,14 +54,14 @@ class Address extends Model {
 		$sql = new Sql();
 
 		$results = $sql->select("CALL sp_addresses_save(:idaddress, :idperson, :desaddress, :desnumber, :descomplement, :descity, :desstate, :descountry, :deszipcode, :desdistrict)", [
-			':idaddress'=>utf8_decode($this->getidaddress()),
+			':idaddress'=>$this->getidaddress(),
 			':idperson'=>$this->getidperson(),
 			':desaddress'=>$this->getdesaddress(),
 			':desnumber'=>$this->getnumber(),
-			':descomplement'=>utf8_decode($this->getdescomplement()),
-			':descity'=>utf8_decode($this->getdescity()),
-			':desstate'=>utf8_decode($this->getdesstate()),
-			':descountry'=>utf8_decode($this->getdescountry()),
+			':descomplement'=>$this->getdescomplement(),
+			':descity'=>$this->getdescity(),
+			':desstate'=>$this->getdesstate(),
+			':descountry'=>$this->getdescountry(),
 			':deszipcode'=>$this->getdeszipcode(),
 			':desdistrict'=>$this->getdesdistrict()
 		]);
