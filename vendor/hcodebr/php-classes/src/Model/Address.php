@@ -57,7 +57,7 @@ class Address extends Model {
 			':idaddress'=>$this->getidaddress(),
 			':idperson'=>$this->getidperson(),
 			':desaddress'=>$this->getdesaddress(),
-			':desnumber'=>$this->getnumber(),
+			':desnumber'=>$this->getdesnumber(),
 			':descomplement'=>$this->getdescomplement(),
 			':descity'=>$this->getdescity(),
 			':desstate'=>$this->getdesstate(),

@@ -256,11 +256,11 @@ $app->post("/checkout", function(){
 	switch ((int)$_POST['payment-method']) {
  
     case 1:
-        header("Location: ./order".$order->getidorder()."/pagseguro");
+        header("Location: ./order/".$order->getidorder()."/pagseguro");
         break;
  
     case 2:
-        header("Location: ./order".$order->getidorder()."/paypal");
+        header("Location: ./order/".$order->getidorder()."/paypal");
         break;
  
 	}
