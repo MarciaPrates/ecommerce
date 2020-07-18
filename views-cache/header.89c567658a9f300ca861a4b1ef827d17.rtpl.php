@@ -41,8 +41,9 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
+          <!--
           <li class="dropdown messages-menu">
-            <!-- Menu toggle button -->
+
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-envelope-o"></i>
               <span class="label label-success">4</span>
@@ -50,35 +51,31 @@
             <ul class="dropdown-menu">
               <li class="header">Você tem 4 mensagens</li>
               <li>
-                <!-- inner menu: contains the messages -->
+
                 <ul class="menu">
-                  <li><!-- start message -->
+                  <li>
                     <a href="#">
                       <div class="pull-left">
-                        <!-- User Image -->
                         <img src="/custom/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
-                      <!-- Message title and timestamp -->
                       <h4>
                         Equipe de Suporte
                         <small><i class="fa fa-clock-o"></i> 5 mins</small>
                       </h4>
-                      <!-- The message -->
                       <p>Quer comprar um novo tema?</p>
                     </a>
                   </li>
-                  <!-- end message -->
                 </ul>
-                <!-- /.menu -->
               </li>
               <li class="footer"><a href="#">Ver Todas as Mensagens</a></li>
             </ul>
-          </li>
+          </li>-->
           <!-- /.messages-menu -->
 
           <!-- Notifications Menu -->
-          <li class="dropdown notifications-menu">
-            <!-- Menu toggle button -->
+
+          <!--<li class="dropdown notifications-menu">
+
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bell-o"></i>
               <span class="label label-warning">10</span>
@@ -86,55 +83,18 @@
             <ul class="dropdown-menu">
               <li class="header">Você tem 10 notificações</li>
               <li>
-                <!-- Inner Menu: contains the notifications -->
                 <ul class="menu">
-                  <li><!-- start notification -->
+                  <li>
                     <a href="#">
                       <i class="fa fa-users text-aqua"></i> 5 novos membros se juntaram hoje
                     </a>
                   </li>
-                  <!-- end notification -->
                 </ul>
               </li>
               <li class="footer"><a href="#">Ver Todos</a></li>
             </ul>
-          </li>
-          <!-- Tasks Menu -->
-          <li class="dropdown tasks-menu">
-            <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">Você tem 9 tarefas</li>
-              <li>
-                <!-- Inner menu: contains the tasks -->
-                <ul class="menu">
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <!-- Task title and progress text -->
-                      <h3>
-                        Projetar alguns botões
-                        <small class="pull-right">20%</small>
-                      </h3>
-                      <!-- The progress bar -->
-                      <div class="progress xs">
-                        <!-- Change the css width attribute to simulate progress -->
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">20% Completo</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                </ul>
-              </li>
-              <li class="footer">
-                <a href="#">Ver Todas as Tarefas</a>
-              </li>
-            </ul>
-          </li>
+          </li>-->
+          
           <!-- User Account Menu -->
           <li class="dropdown user user-menu">
             <!-- Menu Toggle Button -->
@@ -160,13 +120,13 @@
               <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
-                    <a href="#">Seguidores</a>
+                    <a href="/admin/categories">Categorias</a>
                   </div>
                   <div class="col-xs-4 text-center">
-                    <a href="#">Vendas</a>
+                    <a href="/admin/products">Produtos</a>
                   </div>
                   <div class="col-xs-4 text-center">
-                    <a href="#">Amigos</a>
+                    <a href="/admin/orders">Pedidos</a>
                   </div>
                 </div>
                 <!-- /.row -->
