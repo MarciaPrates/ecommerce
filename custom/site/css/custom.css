@@ -95,3 +95,23 @@
 	font-size: 28px;
 
 }
+
+#cor {
+
+	background: linear-gradient( 45deg, rgba(255,0,0), rgba(0,128,0), rgba(255,255,0), rgba(0,0,255) );
+
+}
+
+#cor h2 {
+
+	font-size: 36px;
+
+}
+
+#corbtn {
+
+	background: linear-gradient( 45deg, rgba(255,0,0), rgba(0,128,0), rgba(255,255,0), rgba(0,0,255) );
+	font-size: 16px;
+	color: white !important;
+	
+}

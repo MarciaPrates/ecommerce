@@ -12,16 +12,7 @@
 						<img src="../custom/site/img/cards.png" alt="">
 					</div>
 				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>Navegação</h2>
-						<ul>
-							<li><a href="">Minha Conta</a></li>
-							<li><a href="">Meus Pedidos</a></li>
-							<li><a href="">Lista de desejos</a></li>
-						</ul>
-					</div>
-				</div>
+				
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget about-widget">
 						<h2>Categorias</h2>
@@ -38,6 +29,14 @@
 							<a href="" class="facebook"><i class="fa fa-facebook"></i></a>
 							<a href="contato.html" class="facebook"><i class="fa fa-envelope-open"></i></a>
 						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>Administrador</h2>
+						<ul>
+							<li><a href="http://www.hcodecommerce.com.br/admin/login" target="_blanket"><h2>Admin</h2></a></li>
+						</ul>
 					</div>
 				</div>
 			</div>

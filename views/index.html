@@ -51,15 +51,15 @@
 						<div class="feature-icon">
 							<img src="custom/site/img/icons/1.png" alt="#">
 						</div>
-						<h2>1 ano de garantia</h2>
+						<h2>Confiável</h2>
 					</div>
 				</div>
-				<div class="col-md-4 p-0 feature">
+				<div class="col-md-4 p-0 feature" id="cor">
 					<div class="feature-inner">
 						<div class="feature-icon">
 							<img src="custom/site/img/icons/2.png" alt="#">
 						</div>
-						<h2>Frete Grátis</h2>
+						<h2><span>O melhor</span></h2>
 					</div>
 				</div>
 				<div class="col-md-4 p-0 feature">
@@ -67,7 +67,7 @@
 						<div class="feature-icon">
 							<img src="custom/site/img/icons/3.png" alt="#">
 						</div>
-						<h2>Pagamento Seguro</h2>
+						<h2>Envio Seguro</h2>
 					</div>
 				</div>
 			</div>
@@ -112,7 +112,7 @@
 				<div class="tag-new">EXCLUSIVO</div>
 				<span>Produtos com</span>
 				<h2>EXCELÊNCIA</h2>
-				<a href="#Produtos" class="site-btn">É só aqui!</a>
+				<a class="site-btn" id="corbtn">É só aqui!</a>
 			</div>
 		</div>
 	</section>
